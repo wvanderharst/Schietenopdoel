@@ -438,7 +438,7 @@ function paginaAnalyse(comp, seizoen) {
     const rijen = stand(comp, seizoen);
     const items = rijen
       .map((t) => ({ t, d: t.echt.ptn - t.schot.ptn }))
-      .sort((a, b) => b.d - a.d || a.t.team.localeCompare(b.t.team, "nl"));
+      .sort((a, b) => a.t.schot.pos - b.t.schot.pos);
     const raak = rijen.reduce((a, t) => [a[0] + t.echt.voor, a[1] + t.schot.voor], [0, 0]);
     const schotKampioen = rijen.find((t) => t.schot.pos === 1)?.team;
     const echtKampioen = rijen.find((t) => t.echt.pos === 1)?.team;
@@ -448,7 +448,7 @@ function paginaAnalyse(comp, seizoen) {
         ${tegel(pct.format(raak[0] / raak[1]), "van alle schoten op doel was raak")}
         ${tegel(f2.format(pearson(rijen.map((t) => t.schot.ptn), rijen.map((t) => t.echt.ptn))), "correlatie schotpunten – echte punten", "1 = schotstand voorspelt de stand perfect")}
       </div>
-      <h2>Echte punten min schotpunten</h2>
+      <h2>Echte punten min schotpunten <span class="zacht klein">op volgorde van de schotstand</span></h2>
       <p class="uitleg">Rechts: meer punten gehaald dan de schoten op doel rechtvaardigen (efficiënt, sterke keeper of geluk). Links: minder.</p>
       <div class="grafiek" id="balken"></div>
       <div class="tabelwrap">
