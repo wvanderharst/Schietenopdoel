@@ -1,0 +1,93 @@
+:root {
+  --bg: #f6f7f4;
+  --kaart: #ffffff;
+  --tekst: #1c2321;
+  --zacht: #66706c;
+  --lijn: #e2e5e0;
+  --accent: #1f7a4d;
+  --accent-zacht: #e3f1e8;
+  --w: #1f7a4d;
+  --g: #a3a9a5;
+  --v: #c0443a;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121614;
+    --kaart: #1b201e;
+    --tekst: #e8ece9;
+    --zacht: #98a29d;
+    --lijn: #2c3330;
+    --accent: #4cc387;
+    --accent-zacht: #1d3328;
+    --w: #4cc387;
+    --g: #6c7570;
+    --v: #e0675d;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121614; --kaart: #1b201e; --tekst: #e8ece9; --zacht: #98a29d; --lijn: #2c3330;
+  --accent: #4cc387; --accent-zacht: #1d3328; --w: #4cc387; --g: #6c7570; --v: #e0675d;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--tekst);
+  font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+.kop, main, footer { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+.kop { padding-top: 32px; }
+h1 { margin: 0; font-size: 1.9rem; letter-spacing: -0.02em; }
+.ondertitel { margin: 4px 0 20px; color: var(--zacht); }
+h2 { font-size: 1.1rem; margin: 0; }
+.sectiekop { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin: 28px 0 10px; }
+.meta { color: var(--zacht); font-size: 0.85rem; }
+
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+.tabs button, .filter, .meer {
+  font: inherit; cursor: pointer; border: 1px solid var(--lijn); background: var(--kaart);
+  color: var(--tekst); padding: 6px 12px; border-radius: 999px;
+}
+.tabs button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.filter { font-size: 0.85rem; }
+.meer { display: block; margin: 12px auto 0; }
+
+.tabelwrap { background: var(--kaart); border: 1px solid var(--lijn); border-radius: 10px; overflow-x: auto; }
+.stand { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.stand th, .stand td { padding: 8px 10px; border-bottom: 1px solid var(--lijn); white-space: nowrap; }
+.stand tbody tr:last-child td { border-bottom: 0; }
+.stand th { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--zacht); font-weight: 600; text-align: left; }
+.stand .num { text-align: right; }
+.stand td.team { width: 100%; }
+.stand td.team button { all: unset; cursor: pointer; font-weight: 500; }
+.stand td.team button:hover, .stand td.team button:focus-visible { text-decoration: underline; }
+.stand tr.actief td { background: var(--accent-zacht); }
+.stand td.ptn { font-weight: 700; }
+.stand td.pos { color: var(--zacht); }
+
+.vorm span {
+  display: inline-block; width: 18px; height: 18px; margin-left: 2px; border-radius: 4px;
+  font-size: 0.7rem; line-height: 18px; text-align: center; color: #fff; font-weight: 700;
+}
+.vorm .W { background: var(--w); } .vorm .G { background: var(--g); } .vorm .V { background: var(--v); }
+
+.uitslagen { list-style: none; margin: 0; padding: 0; background: var(--kaart); border: 1px solid var(--lijn); border-radius: 10px; }
+.uitslagen li { display: grid; grid-template-columns: 5.5rem 1fr auto 1fr; gap: 10px; align-items: center; padding: 8px 12px; border-bottom: 1px solid var(--lijn); }
+.uitslagen li:last-child { border-bottom: 0; }
+.uitslagen .datum { color: var(--zacht); font-size: 0.85rem; }
+.uitslagen .thuis { text-align: right; }
+.uitslagen .score { font-weight: 700; font-variant-numeric: tabular-nums; min-width: 3.2rem; text-align: center; background: var(--bg); border-radius: 6px; padding: 2px 6px; }
+.uitslagen .winnaar { font-weight: 600; }
+
+.leeg { color: var(--zacht); }
+footer { color: var(--zacht); font-size: 0.85rem; padding-top: 32px; padding-bottom: 32px; }
+footer a { color: var(--accent); }
+
+@media (max-width: 560px) {
+  .verberg-smal { display: none; }
+  .stand th, .stand td { padding: 7px 6px; }
+  .uitslagen li { grid-template-columns: 1fr auto 1fr; }
+  .uitslagen .datum { grid-column: 1 / -1; }
+}

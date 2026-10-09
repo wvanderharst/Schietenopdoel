@@ -1,0 +1,66 @@
+name: Schotstand bijwerken en publiceren
+
+on:
+  schedule:
+    - cron: "17 6 * * *"   # dagelijks 06:17 UTC
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: schotstand
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Schoten op doel ophalen
+        # Exitcode 2 = een of meer competities mislukt, de rest is wel geschreven.
+        run: python3 scripts/schotstand_scraper.py --out data/wedstrijden.json || [ $? -eq 2 ]
+
+      - name: Wijzigingen committen
+        run: |
+          if git diff --quiet -- data/; then
+            echo "Geen nieuwe data."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "Data bijgewerkt $(date -u +%Y-%m-%d)"
+          git push
+
+  deploy:
+    needs: scrape
+    if: always() && (needs.scrape.result == 'success' || needs.scrape.result == 'skipped')
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Site samenstellen
+        run: |
+          mkdir _site
+          cp -r index.html style.css app.js data _site/
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+      - id: deployment
+        uses: actions/deploy-pages@v4
