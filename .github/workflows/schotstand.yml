@@ -61,6 +61,9 @@ jobs:
           mkdir -p data
           cp -r index.html style.css app.js data _site/
           touch _site/.nojekyll
+          # Versienummer in de bestandsnamen, zodat browsers nooit een oude app.js houden.
+          v=$(git rev-parse --short HEAD)
+          sed -i "s|href=\"style.css\"|href=\"style.css?v=$v\"|; s|src=\"app.js\"|src=\"app.js?v=$v\"|" _site/index.html
           cd _site
           git init -q -b gh-pages
           git config user.name "github-actions[bot]"
