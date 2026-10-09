@@ -4,62 +4,36 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Schotstand</title>
-  <meta name="description" content="De competitiestand alsof elk schot op doel een doelpunt was.">
+  <meta name="description" content="De competitiestand alsof elk schot op doel een doelpunt was, met historie, clubpagina's en analyses.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="kop">
-    <h1>Schotstand</h1>
+    <div class="kop-rij">
+      <a class="logo" href="#/">Schotstand</a>
+      <nav class="hoofdnav" aria-label="Hoofdmenu">
+        <a href="#/stand" data-sectie="stand">Stand</a>
+        <a href="#/analyse" data-sectie="analyse">Analyse</a>
+      </nav>
+      <form class="zoek" id="zoek" role="search">
+        <label class="sr" for="zoekveld">Zoek club</label>
+        <input id="zoekveld" list="clubs" placeholder="Zoek club…" autocomplete="off">
+        <datalist id="clubs"></datalist>
+      </form>
+    </div>
     <p class="ondertitel">De stand alsof elk schot op doel een doelpunt was.</p>
   </header>
 
-  <main>
-    <nav class="tabs" id="competities" aria-label="Competitie"></nav>
-
-    <section aria-labelledby="stand-titel">
-      <div class="sectiekop">
-        <h2 id="stand-titel">Stand</h2>
-        <span class="meta" id="meta"></span>
-      </div>
-      <div class="tabelwrap">
-        <table class="stand" id="stand">
-          <thead>
-            <tr>
-              <th class="num">#</th>
-              <th class="team">Team</th>
-              <th class="num" title="Gespeeld">GS</th>
-              <th class="num" title="Gewonnen">W</th>
-              <th class="num" title="Gelijk">G</th>
-              <th class="num" title="Verloren">V</th>
-              <th class="num verberg-smal" title="Schoten op doel voor">Voor</th>
-              <th class="num verberg-smal" title="Schoten op doel tegen">Tegen</th>
-              <th class="num" title="Doelsaldo (schoten op doel)">+/−</th>
-              <th class="num" title="Punten">Ptn</th>
-              <th class="vorm verberg-smal">Vorm</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
-      <p class="leeg" id="leeg" hidden>Nog geen wedstrijden. De data wordt dagelijks bijgewerkt door GitHub Actions.</p>
-    </section>
-
-    <section aria-labelledby="uitslagen-titel">
-      <div class="sectiekop">
-        <h2 id="uitslagen-titel">Uitslagen</h2>
-        <button class="filter" id="filter" hidden></button>
-      </div>
-      <ol class="uitslagen" id="uitslagen"></ol>
-      <button class="meer" id="meer" hidden>Meer tonen</button>
-    </section>
-  </main>
+  <main id="app" aria-live="polite"><p class="leeg">Laden…</p></main>
 
   <footer>
-    Bron: <a href="https://www.football-data.co.uk/">football-data.co.uk</a> (HST/AST = schoten op doel thuis/uit).
-    Klik op een team om alleen diens wedstrijden te zien.
+    Bron: <a href="https://www.football-data.co.uk/">football-data.co.uk</a> (HST/AST = schoten op doel, FTHG/FTAG = uitslag).
+    Een schot op doel telt als doelpunt; echte doelpunten zijn ook schoten op doel.
+    Standen sorteren op punten, saldo en gescoord; puntenaftrek en onderling resultaat tellen niet mee.
   </footer>
 
+  <div class="tip" id="tip" role="tooltip" hidden></div>
   <script src="app.js"></script>
 </body>
 </html>

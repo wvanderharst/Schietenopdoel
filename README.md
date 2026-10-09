@@ -1,34 +1,41 @@
 # Schotstand
 
-De voetbalstand alsof elk schot op doel een doelpunt was.
+De voetbalstand alsof elk schot op doel een doelpunt was, met historie vanaf het
+eerste seizoen waarvan [football-data.co.uk](https://www.football-data.co.uk/)
+schoten op doel heeft, voor de Eredivisie, Premier League, La Liga, Serie A en Bundesliga.
 
-Een statische website (HTML/CSS/JS, geen build-stap) die de stand berekent uit de
-schoten op doel per wedstrijd (kolommen `HST`/`AST` van
-[football-data.co.uk](https://www.football-data.co.uk/)) voor de Eredivisie,
-Premier League, La Liga, Serie A en Bundesliga.
+**Site:** https://wvanderharst.github.io/Schietenopdoel/
 
-- Meer schoten op doel dan de tegenstander = winst (3 punten), evenveel = gelijk (1 punt).
-- Volgorde bij gelijke punten: saldo, meer schoten op doel voor, naam.
+- **Stand**: schotstand per competitie en seizoen, naast de echte punten en het verschil.
+- **Club** (`#/club/<naam>`): alle seizoenen van een club, punten per wedstrijd in de
+  schotstand en in het echt, en hoeveel van de schoten op doel raak waren.
+- **Analyse**: per seizoen of over alle seizoenen het verschil tussen echte punten en
+  schotpunten per team, hoe vaak de schotkampioen echt kampioen werd, en de correlatie.
 
-## Hoe het werkt
+Meer schoten op doel dan de tegenstander = winst (3 punten), evenveel = gelijk.
+Beide standen sorteren op punten, saldo en gescoord (geen puntenaftrek of onderling resultaat).
 
-| Onderdeel | Wat |
+## Data
+
+| Bestand | Inhoud |
 | --- | --- |
-| `scripts/schotstand_scraper.py` | Haalt de CSV's op en schrijft `data/wedstrijden.json` |
-| `.github/workflows/schotstand.yml` | Draait de scraper dagelijks (06:17 UTC), commit nieuwe data en zet de site in de branch `gh-pages` (GitHub Pages) |
-| `index.html`, `style.css`, `app.js` | De site; rekent de stand in de browser uit |
+| `data/seizoenen/<code>/<seizoen>.json` | Wedstrijden: datum, thuis, uit, schoten op doel, echte goals |
+| `data/samenvatting.json` | Schotstand en echte stand per team per seizoen |
+| `data/index.json` | Competities, seizoenen en seizoenen zonder schotdata |
 
-## Site
+`scripts/database.py` (gebruikt `scripts/schotstand_scraper.py`) haalt ontbrekende
+seizoenen op en ververst steeds het huidige en vorige seizoen.
 
-https://wvanderharst.github.io/Schietenopdoel/
+## GitHub Actions
 
-Bijwerken op verzoek: **Actions → "Schotstand bijwerken en publiceren" → Run workflow**.
-Werkt de site niet? Controleer of **Settings → Pages** de branch `gh-pages` (map `/`) als bron heeft.
+`.github/workflows/schotstand.yml` draait dagelijks om 06:17 UTC, commit nieuwe data
+naar `main` en publiceert de site naar de branch `gh-pages`.
+Handmatig: **Actions → "Schotstand bijwerken en publiceren" → Run workflow**
+(vink "Alle seizoenen opnieuw ophalen" aan om alles te verversen).
 
-## Lokaal draaien
+## Lokaal
 
 ```sh
-python3 scripts/schotstand_scraper.py --out data/wedstrijden.json
-python3 -m http.server
-# open http://localhost:8000
+python3 scripts/database.py
+python3 -m http.server   # open http://localhost:8000
 ```

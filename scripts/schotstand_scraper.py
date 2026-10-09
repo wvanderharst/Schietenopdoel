@@ -58,7 +58,7 @@ def to_int(text):
 
 
 def parse_csv(text, comp):
-    """Zet de CSV-tekst om naar wedstrijden. Rijen zonder schoten op doel worden overgeslagen."""
+    """Zet de CSV-tekst om naar wedstrijden. Rijen zonder schoten op doel of uitslag worden overgeslagen."""
     matches, skipped = [], 0
     for row in csv.DictReader(io.StringIO(text)):
         home = (row.get("HomeTeam") or "").strip()
@@ -66,7 +66,9 @@ def parse_csv(text, comp):
         day = parse_date(row.get("Date"))
         hst = to_int(row.get("HST"))
         ast = to_int(row.get("AST"))
-        if not (home and away and day) or hst is None or ast is None:
+        fthg = to_int(row.get("FTHG"))
+        ftag = to_int(row.get("FTAG"))
+        if not (home and away and day) or None in (hst, ast, fthg, ftag):
             if home or away:
                 skipped += 1
             continue
@@ -78,6 +80,8 @@ def parse_csv(text, comp):
                 "away": away,
                 "homeShots": hst,
                 "awayShots": ast,
+                "homeGoals": fthg,
+                "awayGoals": ftag,
             }
         )
     return matches, skipped
