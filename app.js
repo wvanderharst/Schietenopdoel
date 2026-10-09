@@ -185,10 +185,10 @@ document.addEventListener("scroll", () => (tip.hidden = true), { passive: true }
 
 // ---------- gedeelde stukken ----------
 
-function compTabs(actief, href) {
-  return `<nav class="tabs" aria-label="Competitie">${S.index.competities
-    .map((c) => `<a href="${href(c)}" ${c.code === actief ? 'aria-current="page"' : ""}>${esc(c.naam)}</a>`)
-    .join("")}</nav>`;
+function compTabs(actief, href, { metAlle = false } = {}) {
+  const tabs = S.index.competities.map((c) => `<a href="${href(c)}" ${c.code === actief ? 'aria-current="page"' : ""}>${esc(c.naam)}</a>`);
+  if (metAlle) tabs.push(`<a href="#/analyse/alle" ${actief === "alle" ? 'aria-current="page"' : ""}>Alle competities</a>`);
+  return `<nav class="tabs" aria-label="Competitie">${tabs.join("")}</nav>`;
 }
 
 function seizoenKeuze(comp, actief, { alle = false } = {}) {
@@ -410,7 +410,7 @@ function paginaAnalyse(comp, seizoen) {
   if (seizoen && !c.seizoenen.some((s) => s.code === seizoen)) seizoen = null;
 
   const kop = `
-    ${compTabs(comp, (x) => `#/analyse/${x.code}`)}
+    ${compTabs(comp, (x) => `#/analyse/${x.code}`, { metAlle: true })}
     <div class="sectiekop">
       <h1>Analyse ${esc(c.naam)}${seizoen ? " " + seizoenLabel(seizoen) : ""}</h1>
       ${seizoenKeuze(comp, seizoen, { alle: true })}
@@ -466,13 +466,6 @@ function paginaAnalyse(comp, seizoen) {
 
   // Alle seizoenen
   const k = competitieKengetallen(comp);
-  const teams = aggregeer(comp).map((a) => ({ ...a, spg: a.sp / a.gs, epg: a.ep / a.gs }));
-  const { kol, op } = S.sorteer;
-  const richting = op ? 1 : -1;
-  teams.sort((a, b) => (kol === "team" ? richting * a.team.localeCompare(b.team, "nl") : richting * (a[kol] - b[kol])) || a.team.localeCompare(b.team, "nl"));
-  const minSeizoenen = 3;
-  const grafiekTeams = aggregeer(comp).filter((a) => a.seizoenen >= minSeizoenen).sort((a, b) => b.delta - a.delta);
-
   app.innerHTML = `${kop}
     <p class="meta">${c.seizoenen.length} seizoenen met schotdata (${seizoenLabel(c.seizoenen.at(-1).code)} – ${seizoenLabel(c.seizoenen[0].code)})</p>
     <div class="tegels">
@@ -480,13 +473,35 @@ function paginaAnalyse(comp, seizoen) {
       ${tegel(pct.format(k.raak), "van alle schoten op doel was raak")}
       ${tegel(f2.format(k.r), "correlatie schotpunten – echte punten", "per team per seizoen, punten per wedstrijd")}
     </div>
+    ${teamOverzicht(aggregeer(comp), { minSeizoenen: 3 })}`;
+  koppelTeamOverzicht(() => paginaAnalyse(comp, null));
+}
+
+const VERSCHIL_UITLEG = "+0,10 is ongeveer 3,4 punten extra per seizoen van 34 wedstrijden.";
+
+// Grafiek + sorteerbare tabel met teams over meerdere seizoenen.
+function teamOverzicht(teams, { minSeizoenen, metComp = false, topBodem = 0 }) {
+  teams = teams.map((a) => ({ ...a, spg: a.sp / a.gs, epg: a.ep / a.gs }));
+  const { kol, op } = S.sorteer;
+  const richting = op ? 1 : -1;
+  const tekstKol = (x) => (x === "team" ? "team" : x === "comp" ? "compNaam" : null);
+  teams.sort((a, b) => (tekstKol(kol) ? richting * a[tekstKol(kol)].localeCompare(b[tekstKol(kol)], "nl") : richting * (a[kol] - b[kol])) || a.team.localeCompare(b.team, "nl"));
+  let grafiek = teams.filter((a) => a.seizoenen >= minSeizoenen).sort((a, b) => b.delta - a.delta);
+  if (topBodem && grafiek.length > 2 * topBodem) grafiek = [...grafiek.slice(0, topBodem), ...grafiek.slice(-topBodem)];
+  S.grafiekTeams = grafiek.map((a) => ({
+    label: metComp ? `${a.team} (${a.compKort})` : a.team, waarde: a.delta,
+    tip: `${a.team}${metComp ? " – " + a.compNaam : ""} (${a.seizoenen} seizoenen)\nSchot: ${f2.format(a.spg)} ptn/w\nEcht: ${f2.format(a.epg)} ptn/w\nRaak: ${pct.format(a.raak)}, tegen: ${pct.format(a.raakTegen)}`,
+  }));
+  const kolommen = metComp ? [KOLOMMEN[0], { kol: "comp", label: "Competitie", tekst: true, smal: true }, ...KOLOMMEN.slice(1)] : KOLOMMEN;
+  return `
     <h2>Wie haalt structureel meer of minder dan de schoten?</h2>
-    <p class="uitleg">Gemiddeld verschil tussen echte punten en schotpunten per wedstrijd, teams met minstens ${minSeizoenen} seizoenen. +0,10 is ongeveer 3,4 punten extra per seizoen van 34 wedstrijden.</p>
+    <p class="uitleg">Gemiddeld verschil tussen echte punten en schotpunten per wedstrijd, teams met minstens ${minSeizoenen} seizoenen${
+      topBodem ? ` (de ${topBodem} hoogste en ${topBodem} laagste)` : ""}. ${VERSCHIL_UITLEG}</p>
     <div class="grafiek" id="balken"></div>
     <h2>Alle teams</h2>
     <div class="tabelwrap">
       <table class="tabel sorteerbaar">
-        <thead><tr>${KOLOMMEN.map((x) => `
+        <thead><tr>${kolommen.map((x) => `
           <th class="${x.tekst ? "" : "num"} ${x.smal ? "smal-weg" : ""}" ${x.titel ? `title="${esc(x.titel)}"` : ""}
               aria-sort="${x.kol === kol ? (op ? "ascending" : "descending") : "none"}">
             <button data-sorteer="${x.kol}">${x.label}${x.kol === kol ? (op ? " ▲" : " ▼") : ""}</button>
@@ -495,6 +510,7 @@ function paginaAnalyse(comp, seizoen) {
         <tbody>${teams.map((a) => `
           <tr>
             <td>${clubLink(a.team)}</td>
+            ${metComp ? `<td class="smal-weg">${esc(a.compNaam)}</td>` : ""}
             <td class="num">${a.seizoenen}</td>
             <td class="num smal-weg">${a.gs}</td>
             <td class="num smal-weg">${f2.format(a.spg)}</td>
@@ -506,20 +522,60 @@ function paginaAnalyse(comp, seizoen) {
         </tbody>
       </table>
     </div>`;
+}
 
+function koppelTeamOverzicht(herteken) {
   app.querySelectorAll("[data-sorteer]").forEach((b) => b.addEventListener("click", () => {
     const nieuw = b.dataset.sorteer;
-    S.sorteer = { kol: nieuw, op: S.sorteer.kol === nieuw ? !S.sorteer.op : nieuw === "team" };
+    S.sorteer = { kol: nieuw, op: S.sorteer.kol === nieuw ? !S.sorteer.op : nieuw === "team" || nieuw === "comp" };
     const y = scrollY;
-    paginaAnalyse(comp, null);
+    herteken();
     scrollTo(0, y);
   }));
   const el = document.getElementById("balken");
-  charts = [() => divergerendeBalken(el, grafiekTeams.map((a) => ({
-    label: a.team, waarde: a.delta,
-    tip: `${a.team} (${a.seizoenen} seizoenen)\nSchot: ${f2.format(a.sp / a.gs)} ptn/w\nEcht: ${f2.format(a.ep / a.gs)} ptn/w\nRaak: ${pct.format(a.raak)}, tegen: ${pct.format(a.raakTegen)}`,
-  })), { fmt: f2, as: "Gemiddeld puntenverschil per wedstrijd per team" })];
+  const items = S.grafiekTeams;
+  charts = [() => divergerendeBalken(el, items, { fmt: f2, as: "Gemiddeld puntenverschil per wedstrijd per team" })];
   tekenGrafieken();
+}
+
+const COMP_KORT = { N1: "NED", E0: "ENG", SP1: "ESP", I1: "ITA", D1: "DUI" };
+
+function paginaAnalyseAlle() {
+  const comps = S.index.competities;
+  const rijen = comps.map((c) => ({ c, k: competitieKengetallen(c.code) }));
+  const teams = comps.flatMap((c) => aggregeer(c.code).map((a) => ({ ...a, compNaam: c.naam, compKort: COMP_KORT[c.code] ?? c.code })));
+  const som = rijen.reduce((a, { k }) => [a[0] + k.zelfdeKampioen, a[1] + k.afgerond], [0, 0]);
+  const seizoenen = comps.reduce((n, c) => n + c.seizoenen.length, 0);
+  app.innerHTML = `
+    ${compTabs("alle", (x) => `#/analyse/${x.code}`, { metAlle: true })}
+    <div class="sectiekop"><h1>Analyse alle competities</h1></div>
+    <p class="meta">${comps.length} competities, ${seizoenen} seizoenen met schotdata</p>
+    <div class="tegels">
+      ${tegel(`${som[0]}/${som[1]}`, "afgeronde seizoenen waarin de schotkampioen ook echt kampioen werd", som[1] ? pct.format(som[0] / som[1]) : "")}
+      ${tegel(String(teams.length), "teams in de database")}
+    </div>
+    <h2>Competities vergeleken</h2>
+    <div class="tabelwrap">
+      <table class="tabel">
+        <thead><tr>
+          <th>Competitie</th><th class="num">Seizoenen</th>
+          <th class="num" title="Afgeronde seizoenen waarin de schotkampioen ook echt kampioen werd">Kampioen klopt</th>
+          <th class="num" title="Deel van alle schoten op doel dat een doelpunt was">Raak</th>
+          <th class="num" title="Correlatie tussen schotpunten en echte punten per wedstrijd, per team per seizoen">Correlatie</th>
+        </tr></thead>
+        <tbody>${rijen.map(({ c, k }) => `
+          <tr>
+            <td><a href="#/analyse/${c.code}">${esc(c.naam)}</a></td>
+            <td class="num">${c.seizoenen.length} <span class="zacht smal-weg">(${seizoenLabel(c.seizoenen.at(-1).code)}–)</span></td>
+            <td class="num">${k.zelfdeKampioen}/${k.afgerond}</td>
+            <td class="num">${pct.format(k.raak)}</td>
+            <td class="num">${f2.format(k.r)}</td>
+          </tr>`).join("")}
+        </tbody>
+      </table>
+    </div>
+    ${teamOverzicht(teams, { minSeizoenen: 5, metComp: true, topBodem: 15 })}`;
+  koppelTeamOverzicht(paginaAnalyseAlle);
 }
 
 // ---------- routering ----------
@@ -536,7 +592,8 @@ async function render() {
       await paginaClub(a);
     } else if (sectie === "analyse") {
       document.title = "Analyse – Schotstand";
-      paginaAnalyse(a, b);
+      if (a === "alle") paginaAnalyseAlle();
+      else paginaAnalyse(a, b);
     } else {
       document.title = "Schotstand";
       await paginaStand(a, b);
