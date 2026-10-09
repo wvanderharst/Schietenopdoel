@@ -40,9 +40,17 @@ const DATA = (() => {
 })();
 
 async function laadJson(pad) {
-  const res = await fetch(DATA + pad);
-  if (!res.ok) throw new Error(`${pad}: ${res.status}`);
-  return res.json();
+  try {
+    const res = await fetch(DATA + pad);
+    if (!res.ok) throw new Error(`${pad}: ${res.status}`);
+    return await res.json();
+  } catch (err) {
+    if (DATA === "data/") throw err;
+    // Reserve: de kopie die met de site in gh-pages is meegepubliceerd.
+    const res = await fetch("data/" + pad);
+    if (!res.ok) throw new Error(`${pad}: ${res.status}`);
+    return res.json();
+  }
 }
 
 // Rij uit samenvatting.json (kolomvolgorde: zie STAND_KOLOMMEN in scripts/database.py).
