@@ -1,1 +1,2146 @@
-[]
+[
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-07",
+  "home": "Cambuur",
+  "away": "Excelsior",
+  "homeShots": 2,
+  "awayShots": 9
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-08",
+  "home": "Nijmegen",
+  "away": "Telstar",
+  "homeShots": 4,
+  "awayShots": 3
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-08",
+  "home": "Go Ahead Eagles",
+  "away": "Willem II",
+  "homeShots": 10,
+  "awayShots": 1
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-08",
+  "home": "PSV Eindhoven",
+  "away": "For Sittard",
+  "homeShots": 6,
+  "awayShots": 6
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-08",
+  "home": "AZ Alkmaar",
+  "away": "Den Haag",
+  "homeShots": 4,
+  "awayShots": 0
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-09",
+  "home": "Sparta Rotterdam",
+  "away": "Feyenoord",
+  "homeShots": 0,
+  "awayShots": 6
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-09",
+  "home": "Groningen",
+  "away": "Utrecht",
+  "homeShots": 5,
+  "awayShots": 7
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-09",
+  "home": "Zwolle",
+  "away": "Ajax",
+  "homeShots": 2,
+  "awayShots": 6
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-09",
+  "home": "Heerenveen",
+  "away": "Twente",
+  "homeShots": 4,
+  "awayShots": 3
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-14",
+  "home": "Telstar",
+  "away": "Sparta Rotterdam",
+  "homeShots": 1,
+  "awayShots": 9
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-15",
+  "home": "Willem II",
+  "away": "Nijmegen",
+  "homeShots": 2,
+  "awayShots": 10
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-15",
+  "home": "Utrecht",
+  "away": "AZ Alkmaar",
+  "homeShots": 2,
+  "awayShots": 9
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-15",
+  "home": "Excelsior",
+  "away": "PSV Eindhoven",
+  "homeShots": 2,
+  "awayShots": 8
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-15",
+  "home": "For Sittard",
+  "away": "Cambuur",
+  "homeShots": 7,
+  "awayShots": 7
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-16",
+  "home": "Den Haag",
+  "away": "Groningen",
+  "homeShots": 4,
+  "awayShots": 14
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-16",
+  "home": "Feyenoord",
+  "away": "Go Ahead Eagles",
+  "homeShots": 6,
+  "awayShots": 6
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-16",
+  "home": "Twente",
+  "away": "Zwolle",
+  "homeShots": 10,
+  "awayShots": 3
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-16",
+  "home": "Ajax",
+  "away": "Heerenveen",
+  "homeShots": 4,
+  "awayShots": 8
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-22",
+  "home": "For Sittard",
+  "away": "AZ Alkmaar",
+  "homeShots": 2,
+  "awayShots": 11
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-22",
+  "home": "Sparta Rotterdam",
+  "away": "Utrecht",
+  "homeShots": 5,
+  "awayShots": 4
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-22",
+  "home": "Heerenveen",
+  "away": "Zwolle",
+  "homeShots": 5,
+  "awayShots": 7
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-23",
+  "home": "Go Ahead Eagles",
+  "away": "Den Haag",
+  "homeShots": 5,
+  "awayShots": 3
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-23",
+  "home": "PSV Eindhoven",
+  "away": "Groningen",
+  "homeShots": 12,
+  "awayShots": 4
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-23",
+  "home": "Cambuur",
+  "away": "Feyenoord",
+  "homeShots": 4,
+  "awayShots": 7
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-28",
+  "home": "Groningen",
+  "away": "For Sittard",
+  "homeShots": 2,
+  "awayShots": 5
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-29",
+  "home": "Excelsior",
+  "away": "Sparta Rotterdam",
+  "homeShots": 5,
+  "awayShots": 2
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-29",
+  "home": "AZ Alkmaar",
+  "away": "Go Ahead Eagles",
+  "homeShots": 8,
+  "awayShots": 4
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-29",
+  "home": "Zwolle",
+  "away": "Nijmegen",
+  "homeShots": 2,
+  "awayShots": 4
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-30",
+  "home": "Utrecht",
+  "away": "PSV Eindhoven",
+  "homeShots": 1,
+  "awayShots": 14
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-30",
+  "home": "Feyenoord",
+  "away": "Den Haag",
+  "homeShots": 12,
+  "awayShots": 3
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-30",
+  "home": "Willem II",
+  "away": "Heerenveen",
+  "homeShots": 5,
+  "awayShots": 5
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-30",
+  "home": "Telstar",
+  "away": "Ajax",
+  "homeShots": 4,
+  "awayShots": 9
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-08-30",
+  "home": "Cambuur",
+  "away": "Twente",
+  "homeShots": 3,
+  "awayShots": 10
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-04",
+  "home": "Sparta Rotterdam",
+  "away": "Zwolle",
+  "homeShots": 8,
+  "awayShots": 6
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-05",
+  "home": "Nijmegen",
+  "away": "Feyenoord",
+  "homeShots": 2,
+  "awayShots": 5
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-05",
+  "home": "Ajax",
+  "away": "PSV Eindhoven",
+  "homeShots": 6,
+  "awayShots": 5
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-05",
+  "home": "Willem II",
+  "away": "Excelsior",
+  "homeShots": 2,
+  "awayShots": 6
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-06",
+  "home": "Groningen",
+  "away": "Twente",
+  "homeShots": 4,
+  "awayShots": 5
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-06",
+  "home": "Heerenveen",
+  "away": "AZ Alkmaar",
+  "homeShots": 5,
+  "awayShots": 8
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-06",
+  "home": "Telstar",
+  "away": "Cambuur",
+  "homeShots": 2,
+  "awayShots": 3
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-06",
+  "home": "Den Haag",
+  "away": "For Sittard",
+  "homeShots": 3,
+  "awayShots": 5
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-08",
+  "home": "Utrecht",
+  "away": "Go Ahead Eagles",
+  "homeShots": 6,
+  "awayShots": 7
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-08",
+  "home": "Nijmegen",
+  "away": "Excelsior",
+  "homeShots": 3,
+  "awayShots": 5
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-09",
+  "home": "Twente",
+  "away": "Telstar",
+  "homeShots": 8,
+  "awayShots": 2
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-11",
+  "home": "AZ Alkmaar",
+  "away": "Willem II",
+  "homeShots": 5,
+  "awayShots": 2
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-12",
+  "home": "Twente",
+  "away": "Den Haag",
+  "homeShots": 12,
+  "awayShots": 5
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-12",
+  "home": "Go Ahead Eagles",
+  "away": "Groningen",
+  "homeShots": 6,
+  "awayShots": 2
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-12",
+  "home": "For Sittard",
+  "away": "Ajax",
+  "homeShots": 4,
+  "awayShots": 11
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-12",
+  "home": "Cambuur",
+  "away": "Nijmegen",
+  "homeShots": 7,
+  "awayShots": 1
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-13",
+  "home": "Excelsior",
+  "away": "Utrecht",
+  "homeShots": 4,
+  "awayShots": 6
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-13",
+  "home": "Heerenveen",
+  "away": "Telstar",
+  "homeShots": 6,
+  "awayShots": 2
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-13",
+  "home": "Zwolle",
+  "away": "Feyenoord",
+  "homeShots": 3,
+  "awayShots": 12
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-13",
+  "home": "PSV Eindhoven",
+  "away": "Sparta Rotterdam",
+  "homeShots": 10,
+  "awayShots": 6
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-15",
+  "home": "Ajax",
+  "away": "Willem II",
+  "homeShots": 12,
+  "awayShots": 4
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-18",
+  "home": "Groningen",
+  "away": "Zwolle",
+  "homeShots": 7,
+  "awayShots": 1
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-19",
+  "home": "Den Haag",
+  "away": "Cambuur",
+  "homeShots": 6,
+  "awayShots": 3
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-19",
+  "home": "Sparta Rotterdam",
+  "away": "Heerenveen",
+  "homeShots": 0,
+  "awayShots": 9
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-19",
+  "home": "Ajax",
+  "away": "Excelsior",
+  "homeShots": 8,
+  "awayShots": 2
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-19",
+  "home": "Willem II",
+  "away": "For Sittard",
+  "homeShots": 3,
+  "awayShots": 3
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-20",
+  "home": "Feyenoord",
+  "away": "Utrecht",
+  "homeShots": 12,
+  "awayShots": 2
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-20",
+  "home": "AZ Alkmaar",
+  "away": "Telstar",
+  "homeShots": 8,
+  "awayShots": 1
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-20",
+  "home": "Twente",
+  "away": "PSV Eindhoven",
+  "homeShots": 5,
+  "awayShots": 4
+ },
+ {
+  "comp": "Eredivisie",
+  "date": "2026-09-20",
+  "home": "Nijmegen",
+  "away": "Go Ahead Eagles",
+  "homeShots": 5,
+  "awayShots": 6
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-08-21",
+  "home": "Arsenal",
+  "away": "Coventry",
+  "homeShots": 6,
+  "awayShots": 1
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-08-22",
+  "home": "Hull",
+  "away": "Man United",
+  "homeShots": 4,
+  "awayShots": 5
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-08-22",
+  "home": "Everton",
+  "away": "Crystal Palace",
+  "homeShots": 5,
+  "awayShots": 4
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-08-22",
+  "home": "Ipswich",
+  "away": "Sunderland",
+  "homeShots": 3,
+  "awayShots": 4
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-08-22",
+  "home": "Nott'm Forest",
+  "away": "Leeds",
+  "homeShots": 2,
+  "awayShots": 3
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-08-22",
+  "home": "Brentford",
+  "away": "Tottenham",
+  "homeShots": 8,
+  "awayShots": 4
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-08-23",
+  "home": "Brighton",
+  "away": "Aston Villa",
+  "homeShots": 6,
+  "awayShots": 0
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-08-23",
+  "home": "Man City",
+  "away": "Bournemouth",
+  "homeShots": 6,
+  "awayShots": 4
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-08-23",
+  "home": "Newcastle",
+  "away": "Liverpool",
+  "homeShots": 4,
+  "awayShots": 7
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-08-24",
+  "home": "Fulham",
+  "away": "Chelsea",
+  "homeShots": 6,
+  "awayShots": 6
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-08-28",
+  "home": "Crystal Palace",
+  "away": "Man City",
+  "homeShots": 1,
+  "awayShots": 9
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-08-29",
+  "home": "Liverpool",
+  "away": "Nott'm Forest",
+  "homeShots": 4,
+  "awayShots": 3
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-08-29",
+  "home": "Bournemouth",
+  "away": "Everton",
+  "homeShots": 5,
+  "awayShots": 7
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-08-29",
+  "home": "Coventry",
+  "away": "Hull",
+  "homeShots": 3,
+  "awayShots": 2
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-08-29",
+  "home": "Tottenham",
+  "away": "Newcastle",
+  "homeShots": 6,
+  "awayShots": 2
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-08-30",
+  "home": "Chelsea",
+  "away": "Brighton",
+  "homeShots": 6,
+  "awayShots": 6
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-08-30",
+  "home": "Leeds",
+  "away": "Brentford",
+  "homeShots": 2,
+  "awayShots": 5
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-08-30",
+  "home": "Sunderland",
+  "away": "Fulham",
+  "homeShots": 4,
+  "awayShots": 0
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-08-30",
+  "home": "Man United",
+  "away": "Ipswich",
+  "homeShots": 11,
+  "awayShots": 5
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-08-31",
+  "home": "Aston Villa",
+  "away": "Arsenal",
+  "homeShots": 0,
+  "awayShots": 2
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-04",
+  "home": "Ipswich",
+  "away": "Liverpool",
+  "homeShots": 5,
+  "awayShots": 7
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-05",
+  "home": "Newcastle",
+  "away": "Bournemouth",
+  "homeShots": 2,
+  "awayShots": 5
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-05",
+  "home": "Brentford",
+  "away": "Sunderland",
+  "homeShots": 2,
+  "awayShots": 5
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-05",
+  "home": "Brighton",
+  "away": "Leeds",
+  "homeShots": 5,
+  "awayShots": 5
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-05",
+  "home": "Fulham",
+  "away": "Crystal Palace",
+  "homeShots": 6,
+  "awayShots": 5
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-05",
+  "home": "Man City",
+  "away": "Coventry",
+  "homeShots": 4,
+  "awayShots": 3
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-05",
+  "home": "Nott'm Forest",
+  "away": "Tottenham",
+  "homeShots": 2,
+  "awayShots": 0
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-05",
+  "home": "Hull",
+  "away": "Aston Villa",
+  "homeShots": 4,
+  "awayShots": 1
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-06",
+  "home": "Everton",
+  "away": "Man United",
+  "homeShots": 6,
+  "awayShots": 3
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-06",
+  "home": "Arsenal",
+  "away": "Chelsea",
+  "homeShots": 9,
+  "awayShots": 5
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-12",
+  "home": "Aston Villa",
+  "away": "Nott'm Forest",
+  "homeShots": 5,
+  "awayShots": 7
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-12",
+  "home": "Bournemouth",
+  "away": "Brentford",
+  "homeShots": 10,
+  "awayShots": 2
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-12",
+  "home": "Chelsea",
+  "away": "Hull",
+  "homeShots": 7,
+  "awayShots": 5
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-12",
+  "home": "Crystal Palace",
+  "away": "Ipswich",
+  "homeShots": 4,
+  "awayShots": 6
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-12",
+  "home": "Liverpool",
+  "away": "Fulham",
+  "homeShots": 3,
+  "awayShots": 4
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-12",
+  "home": "Tottenham",
+  "away": "Everton",
+  "homeShots": 2,
+  "awayShots": 3
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-12",
+  "home": "Sunderland",
+  "away": "Arsenal",
+  "homeShots": 3,
+  "awayShots": 5
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-13",
+  "home": "Coventry",
+  "away": "Brighton",
+  "homeShots": 6,
+  "awayShots": 7
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-13",
+  "home": "Man United",
+  "away": "Man City",
+  "homeShots": 3,
+  "awayShots": 2
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-14",
+  "home": "Leeds",
+  "away": "Newcastle",
+  "homeShots": 6,
+  "awayShots": 5
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-18",
+  "home": "Brentford",
+  "away": "Chelsea",
+  "homeShots": 6,
+  "awayShots": 2
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-19",
+  "home": "Tottenham",
+  "away": "Aston Villa",
+  "homeShots": 7,
+  "awayShots": 6
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-19",
+  "home": "Brighton",
+  "away": "Arsenal",
+  "homeShots": 5,
+  "awayShots": 2
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-19",
+  "home": "Everton",
+  "away": "Ipswich",
+  "homeShots": 2,
+  "awayShots": 4
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-19",
+  "home": "Newcastle",
+  "away": "Hull",
+  "homeShots": 5,
+  "awayShots": 4
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-19",
+  "home": "Nott'm Forest",
+  "away": "Coventry",
+  "homeShots": 3,
+  "awayShots": 3
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-20",
+  "home": "Bournemouth",
+  "away": "Liverpool",
+  "homeShots": 2,
+  "awayShots": 3
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-20",
+  "home": "Leeds",
+  "away": "Crystal Palace",
+  "homeShots": 2,
+  "awayShots": 4
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-20",
+  "home": "Man City",
+  "away": "Sunderland",
+  "homeShots": 6,
+  "awayShots": 9
+ },
+ {
+  "comp": "Premier League",
+  "date": "2026-09-20",
+  "home": "Fulham",
+  "away": "Man United",
+  "homeShots": 6,
+  "awayShots": 6
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-15",
+  "home": "Alaves",
+  "away": "Getafe",
+  "homeShots": 8,
+  "awayShots": 2
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-15",
+  "home": "Sevilla",
+  "away": "Vallecano",
+  "homeShots": 4,
+  "awayShots": 3
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-16",
+  "home": "Santander",
+  "away": "Villarreal",
+  "homeShots": 3,
+  "awayShots": 7
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-16",
+  "home": "Espanol",
+  "away": "Levante",
+  "homeShots": 6,
+  "awayShots": 0
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-17",
+  "home": "La Coruna",
+  "away": "Elche",
+  "homeShots": 3,
+  "awayShots": 6
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-19",
+  "home": "Ath Madrid",
+  "away": "Malaga",
+  "homeShots": 6,
+  "awayShots": 1
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-20",
+  "home": "Vallecano",
+  "away": "Alaves",
+  "homeShots": 3,
+  "awayShots": 3
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-21",
+  "home": "Betis",
+  "away": "Sociedad",
+  "homeShots": 7,
+  "awayShots": 3
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-22",
+  "home": "Ath Bilbao",
+  "away": "Sevilla",
+  "homeShots": 8,
+  "awayShots": 4
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-22",
+  "home": "Valencia",
+  "away": "Celta",
+  "homeShots": 2,
+  "awayShots": 3
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-22",
+  "home": "Espanol",
+  "away": "Real Madrid",
+  "homeShots": 3,
+  "awayShots": 8
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-23",
+  "home": "Ath Madrid",
+  "away": "Villarreal",
+  "homeShots": 4,
+  "awayShots": 6
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-23",
+  "home": "Getafe",
+  "away": "Santander",
+  "homeShots": 1,
+  "awayShots": 3
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-23",
+  "home": "Elche",
+  "away": "Barcelona",
+  "homeShots": 2,
+  "awayShots": 7
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-24",
+  "home": "Osasuna",
+  "away": "Levante",
+  "homeShots": 7,
+  "awayShots": 1
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-24",
+  "home": "Malaga",
+  "away": "La Coruna",
+  "homeShots": 2,
+  "awayShots": 4
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-25",
+  "home": "Valencia",
+  "away": "Betis",
+  "homeShots": 3,
+  "awayShots": 3
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-26",
+  "home": "Real Madrid",
+  "away": "Sociedad",
+  "homeShots": 11,
+  "awayShots": 3
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-27",
+  "home": "Celta",
+  "away": "Osasuna",
+  "homeShots": 2,
+  "awayShots": 5
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-27",
+  "home": "Barcelona",
+  "away": "Ath Bilbao",
+  "homeShots": 10,
+  "awayShots": 0
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-28",
+  "home": "Santander",
+  "away": "Elche",
+  "homeShots": 6,
+  "awayShots": 7
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-28",
+  "home": "Alaves",
+  "away": "Villarreal",
+  "homeShots": 2,
+  "awayShots": 6
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-29",
+  "home": "Levante",
+  "away": "Betis",
+  "homeShots": 10,
+  "awayShots": 6
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-29",
+  "home": "Sociedad",
+  "away": "Espanol",
+  "homeShots": 10,
+  "awayShots": 3
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-29",
+  "home": "Sevilla",
+  "away": "Ath Madrid",
+  "homeShots": 5,
+  "awayShots": 5
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-30",
+  "home": "Real Madrid",
+  "away": "Malaga",
+  "homeShots": 8,
+  "awayShots": 1
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-30",
+  "home": "La Coruna",
+  "away": "Valencia",
+  "homeShots": 4,
+  "awayShots": 4
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-30",
+  "home": "Celta",
+  "away": "Ath Bilbao",
+  "homeShots": 2,
+  "awayShots": 7
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-31",
+  "home": "Osasuna",
+  "away": "Getafe",
+  "homeShots": 2,
+  "awayShots": 1
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-08-31",
+  "home": "Barcelona",
+  "away": "Vallecano",
+  "homeShots": 9,
+  "awayShots": 5
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-03",
+  "home": "Sociedad",
+  "away": "Celta",
+  "homeShots": 5,
+  "awayShots": 2
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-04",
+  "home": "Betis",
+  "away": "Real Madrid",
+  "homeShots": 5,
+  "awayShots": 8
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-05",
+  "home": "Ath Bilbao",
+  "away": "Ath Madrid",
+  "homeShots": 4,
+  "awayShots": 5
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-05",
+  "home": "Vallecano",
+  "away": "Santander",
+  "homeShots": 10,
+  "awayShots": 4
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-05",
+  "home": "Villarreal",
+  "away": "La Coruna",
+  "homeShots": 5,
+  "awayShots": 3
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-06",
+  "home": "Valencia",
+  "away": "Barcelona",
+  "homeShots": 2,
+  "awayShots": 10
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-06",
+  "home": "Alaves",
+  "away": "Osasuna",
+  "homeShots": 7,
+  "awayShots": 5
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-06",
+  "home": "Malaga",
+  "away": "Levante",
+  "homeShots": 3,
+  "awayShots": 3
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-06",
+  "home": "Espanol",
+  "away": "Sevilla",
+  "homeShots": 3,
+  "awayShots": 3
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-07",
+  "home": "Getafe",
+  "away": "Celta",
+  "homeShots": 2,
+  "awayShots": 3
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-07",
+  "home": "Elche",
+  "away": "Sociedad",
+  "homeShots": 10,
+  "awayShots": 6
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-11",
+  "home": "Sevilla",
+  "away": "Valencia",
+  "homeShots": 4,
+  "awayShots": 0
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-12",
+  "home": "Santander",
+  "away": "Alaves",
+  "homeShots": 4,
+  "awayShots": 8
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-12",
+  "home": "Osasuna",
+  "away": "Espanol",
+  "homeShots": 4,
+  "awayShots": 3
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-12",
+  "home": "Ath Bilbao",
+  "away": "Elche",
+  "homeShots": 3,
+  "awayShots": 1
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-12",
+  "home": "Real Madrid",
+  "away": "Vallecano",
+  "homeShots": 11,
+  "awayShots": 7
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-13",
+  "home": "Celta",
+  "away": "Malaga",
+  "homeShots": 5,
+  "awayShots": 2
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-13",
+  "home": "Levante",
+  "away": "Barcelona",
+  "homeShots": 7,
+  "awayShots": 6
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-13",
+  "home": "Getafe",
+  "away": "La Coruna",
+  "homeShots": 4,
+  "awayShots": 3
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-13",
+  "home": "Sociedad",
+  "away": "Ath Madrid",
+  "homeShots": 3,
+  "awayShots": 5
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-14",
+  "home": "Villarreal",
+  "away": "Betis",
+  "homeShots": 8,
+  "awayShots": 12
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-15",
+  "home": "Vallecano",
+  "away": "Espanol",
+  "homeShots": 2,
+  "awayShots": 5
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-15",
+  "home": "Alaves",
+  "away": "Valencia",
+  "homeShots": 3,
+  "awayShots": 3
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-15",
+  "home": "Elche",
+  "away": "Real Madrid",
+  "homeShots": 3,
+  "awayShots": 4
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-16",
+  "home": "Ath Madrid",
+  "away": "Osasuna",
+  "homeShots": 11,
+  "awayShots": 1
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-16",
+  "home": "La Coruna",
+  "away": "Sevilla",
+  "homeShots": 3,
+  "awayShots": 6
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-16",
+  "home": "Barcelona",
+  "away": "Santander",
+  "homeShots": 9,
+  "awayShots": 3
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-17",
+  "home": "Betis",
+  "away": "Getafe",
+  "homeShots": 8,
+  "awayShots": 2
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-17",
+  "home": "Malaga",
+  "away": "Villarreal",
+  "homeShots": 1,
+  "awayShots": 7
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-18",
+  "home": "Espanol",
+  "away": "Elche",
+  "homeShots": 4,
+  "awayShots": 6
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-19",
+  "home": "Osasuna",
+  "away": "Vallecano",
+  "homeShots": 3,
+  "awayShots": 2
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-19",
+  "home": "Ath Bilbao",
+  "away": "Alaves",
+  "homeShots": 6,
+  "awayShots": 0
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-19",
+  "home": "Celta",
+  "away": "Santander",
+  "homeShots": 9,
+  "awayShots": 5
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-19",
+  "home": "Sevilla",
+  "away": "Barcelona",
+  "homeShots": 3,
+  "awayShots": 7
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-20",
+  "home": "Getafe",
+  "away": "Malaga",
+  "homeShots": 7,
+  "awayShots": 4
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-20",
+  "home": "Ath Madrid",
+  "away": "Real Madrid",
+  "homeShots": 9,
+  "awayShots": 3
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-20",
+  "home": "La Coruna",
+  "away": "Betis",
+  "homeShots": 7,
+  "awayShots": 4
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-20",
+  "home": "Villarreal",
+  "away": "Levante",
+  "homeShots": 7,
+  "awayShots": 1
+ },
+ {
+  "comp": "La Liga",
+  "date": "2026-09-20",
+  "home": "Valencia",
+  "away": "Sociedad",
+  "homeShots": 5,
+  "awayShots": 6
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-08-22",
+  "home": "Inter",
+  "away": "Monza",
+  "homeShots": 5,
+  "awayShots": 3
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-08-22",
+  "home": "Udinese",
+  "away": "Como",
+  "homeShots": 3,
+  "awayShots": 6
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-08-22",
+  "home": "Genoa",
+  "away": "Napoli",
+  "homeShots": 2,
+  "awayShots": 4
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-08-22",
+  "home": "Parma",
+  "away": "Cagliari",
+  "homeShots": 2,
+  "awayShots": 5
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-08-23",
+  "home": "Frosinone",
+  "away": "Juventus",
+  "homeShots": 2,
+  "awayShots": 5
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-08-23",
+  "home": "Venezia",
+  "away": "Lecce",
+  "homeShots": 7,
+  "awayShots": 5
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-08-23",
+  "home": "Atalanta",
+  "away": "Sassuolo",
+  "homeShots": 7,
+  "awayShots": 8
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-08-23",
+  "home": "Torino",
+  "away": "Milan",
+  "homeShots": 1,
+  "awayShots": 4
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-08-24",
+  "home": "Bologna",
+  "away": "Lazio",
+  "homeShots": 5,
+  "awayShots": 3
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-08-24",
+  "home": "Roma",
+  "away": "Fiorentina",
+  "homeShots": 8,
+  "awayShots": 4
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-08-28",
+  "home": "Milan",
+  "away": "Venezia",
+  "homeShots": 5,
+  "awayShots": 2
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-08-29",
+  "home": "Fiorentina",
+  "away": "Frosinone",
+  "homeShots": 4,
+  "awayShots": 6
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-08-29",
+  "home": "Monza",
+  "away": "Udinese",
+  "homeShots": 5,
+  "awayShots": 5
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-08-29",
+  "home": "Sassuolo",
+  "away": "Torino",
+  "homeShots": 7,
+  "awayShots": 4
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-08-29",
+  "home": "Juventus",
+  "away": "Parma",
+  "homeShots": 6,
+  "awayShots": 3
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-08-30",
+  "home": "Napoli",
+  "away": "Como",
+  "homeShots": 2,
+  "awayShots": 6
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-08-30",
+  "home": "Cagliari",
+  "away": "Inter",
+  "homeShots": 0,
+  "awayShots": 7
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-08-30",
+  "home": "Lazio",
+  "away": "Genoa",
+  "homeShots": 2,
+  "awayShots": 1
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-08-31",
+  "home": "Lecce",
+  "away": "Roma",
+  "homeShots": 3,
+  "awayShots": 8
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-08-31",
+  "home": "Atalanta",
+  "away": "Bologna",
+  "homeShots": 2,
+  "awayShots": 3
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-04",
+  "home": "Genoa",
+  "away": "Como",
+  "homeShots": 2,
+  "awayShots": 9
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-05",
+  "home": "Fiorentina",
+  "away": "Torino",
+  "homeShots": 6,
+  "awayShots": 4
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-05",
+  "home": "Inter",
+  "away": "Napoli",
+  "homeShots": 8,
+  "awayShots": 7
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-05",
+  "home": "Roma",
+  "away": "Atalanta",
+  "homeShots": 10,
+  "awayShots": 2
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-06",
+  "home": "Frosinone",
+  "away": "Venezia",
+  "homeShots": 8,
+  "awayShots": 4
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-06",
+  "home": "Parma",
+  "away": "Monza",
+  "homeShots": 3,
+  "awayShots": 5
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-06",
+  "home": "Bologna",
+  "away": "Sassuolo",
+  "homeShots": 5,
+  "awayShots": 6
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-06",
+  "home": "Juventus",
+  "away": "Milan",
+  "homeShots": 5,
+  "awayShots": 1
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-07",
+  "home": "Cagliari",
+  "away": "Lecce",
+  "homeShots": 9,
+  "awayShots": 3
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-07",
+  "home": "Udinese",
+  "away": "Lazio",
+  "homeShots": 6,
+  "awayShots": 6
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-11",
+  "home": "Venezia",
+  "away": "Fiorentina",
+  "homeShots": 3,
+  "awayShots": 10
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-12",
+  "home": "Genoa",
+  "away": "Frosinone",
+  "homeShots": 5,
+  "awayShots": 6
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-12",
+  "home": "Lazio",
+  "away": "Milan",
+  "homeShots": 6,
+  "awayShots": 7
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-12",
+  "home": "Atalanta",
+  "away": "Cagliari",
+  "homeShots": 4,
+  "awayShots": 5
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-13",
+  "home": "Lecce",
+  "away": "Monza",
+  "homeShots": 3,
+  "awayShots": 11
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-13",
+  "home": "Napoli",
+  "away": "Bologna",
+  "homeShots": 3,
+  "awayShots": 2
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-13",
+  "home": "Sassuolo",
+  "away": "Juventus",
+  "homeShots": 6,
+  "awayShots": 8
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-14",
+  "home": "Como",
+  "away": "Parma",
+  "homeShots": 7,
+  "awayShots": 4
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-14",
+  "home": "Torino",
+  "away": "Roma",
+  "homeShots": 3,
+  "awayShots": 5
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-14",
+  "home": "Inter",
+  "away": "Udinese",
+  "homeShots": 12,
+  "awayShots": 5
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-18",
+  "home": "Monza",
+  "away": "Sassuolo",
+  "homeShots": 6,
+  "awayShots": 8
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-19",
+  "home": "Bologna",
+  "away": "Torino",
+  "homeShots": 1,
+  "awayShots": 3
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-19",
+  "home": "Udinese",
+  "away": "Cagliari",
+  "homeShots": 5,
+  "awayShots": 2
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-19",
+  "home": "Roma",
+  "away": "Inter",
+  "homeShots": 4,
+  "awayShots": 5
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-19",
+  "home": "Venezia",
+  "away": "Lazio",
+  "homeShots": 6,
+  "awayShots": 2
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-20",
+  "home": "Fiorentina",
+  "away": "Napoli",
+  "homeShots": 4,
+  "awayShots": 5
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-20",
+  "home": "Frosinone",
+  "away": "Como",
+  "homeShots": 6,
+  "awayShots": 8
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-20",
+  "home": "Parma",
+  "away": "Genoa",
+  "homeShots": 2,
+  "awayShots": 5
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-20",
+  "home": "Juventus",
+  "away": "Atalanta",
+  "homeShots": 5,
+  "awayShots": 2
+ },
+ {
+  "comp": "Serie A",
+  "date": "2026-09-20",
+  "home": "Milan",
+  "away": "Lecce",
+  "homeShots": 4,
+  "awayShots": 3
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-08-28",
+  "home": "Bayern Munich",
+  "away": "Stuttgart",
+  "homeShots": 9,
+  "awayShots": 4
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-08-29",
+  "home": "Elversberg",
+  "away": "Leverkusen",
+  "homeShots": 6,
+  "awayShots": 4
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-08-29",
+  "home": "FC Koln",
+  "away": "Hoffenheim",
+  "homeShots": 6,
+  "awayShots": 4
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-08-29",
+  "home": "Mainz",
+  "away": "Paderborn",
+  "homeShots": 4,
+  "awayShots": 0
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-08-29",
+  "home": "RB Leipzig",
+  "away": "M'gladbach",
+  "homeShots": 11,
+  "awayShots": 4
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-08-29",
+  "home": "Union Berlin",
+  "away": "Ein Frankfurt",
+  "homeShots": 10,
+  "awayShots": 3
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-08-29",
+  "home": "Dortmund",
+  "away": "Hamburg",
+  "homeShots": 6,
+  "awayShots": 3
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-08-30",
+  "home": "Freiburg",
+  "away": "Werder Bremen",
+  "homeShots": 5,
+  "awayShots": 3
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-08-30",
+  "home": "Augsburg",
+  "away": "Schalke 04",
+  "homeShots": 13,
+  "awayShots": 5
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-04",
+  "home": "Stuttgart",
+  "away": "FC Koln",
+  "homeShots": 8,
+  "awayShots": 5
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-05",
+  "home": "Hoffenheim",
+  "away": "Dortmund",
+  "homeShots": 6,
+  "awayShots": 4
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-05",
+  "home": "Leverkusen",
+  "away": "Union Berlin",
+  "homeShots": 10,
+  "awayShots": 0
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-05",
+  "home": "M'gladbach",
+  "away": "Elversberg",
+  "homeShots": 6,
+  "awayShots": 10
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-05",
+  "home": "Paderborn",
+  "away": "Freiburg",
+  "homeShots": 3,
+  "awayShots": 5
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-05",
+  "home": "Werder Bremen",
+  "away": "RB Leipzig",
+  "homeShots": 7,
+  "awayShots": 5
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-05",
+  "home": "Schalke 04",
+  "away": "Bayern Munich",
+  "homeShots": 1,
+  "awayShots": 5
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-06",
+  "home": "Hamburg",
+  "away": "Mainz",
+  "homeShots": 1,
+  "awayShots": 8
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-06",
+  "home": "Ein Frankfurt",
+  "away": "Augsburg",
+  "homeShots": 8,
+  "awayShots": 7
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-11",
+  "home": "Union Berlin",
+  "away": "Schalke 04",
+  "homeShots": 8,
+  "awayShots": 10
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-12",
+  "home": "Augsburg",
+  "away": "Leverkusen",
+  "homeShots": 5,
+  "awayShots": 5
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-12",
+  "home": "Dortmund",
+  "away": "Paderborn",
+  "homeShots": 8,
+  "awayShots": 0
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-12",
+  "home": "Freiburg",
+  "away": "M'gladbach",
+  "homeShots": 9,
+  "awayShots": 0
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-12",
+  "home": "Hoffenheim",
+  "away": "Stuttgart",
+  "homeShots": 8,
+  "awayShots": 5
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-12",
+  "home": "Mainz",
+  "away": "Ein Frankfurt",
+  "homeShots": 5,
+  "awayShots": 5
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-12",
+  "home": "FC Koln",
+  "away": "Werder Bremen",
+  "homeShots": 6,
+  "awayShots": 5
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-13",
+  "home": "RB Leipzig",
+  "away": "Hamburg",
+  "homeShots": 6,
+  "awayShots": 4
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-13",
+  "home": "Elversberg",
+  "away": "Bayern Munich",
+  "homeShots": 1,
+  "awayShots": 6
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-18",
+  "home": "Bayern Munich",
+  "away": "Union Berlin",
+  "homeShots": 15,
+  "awayShots": 2
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-19",
+  "home": "Ein Frankfurt",
+  "away": "Freiburg",
+  "homeShots": 3,
+  "awayShots": 7
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-19",
+  "home": "Hamburg",
+  "away": "FC Koln",
+  "homeShots": 7,
+  "awayShots": 5
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-19",
+  "home": "M'gladbach",
+  "away": "Mainz",
+  "homeShots": 7,
+  "awayShots": 8
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-19",
+  "home": "Werder Bremen",
+  "away": "Augsburg",
+  "homeShots": 11,
+  "awayShots": 4
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-19",
+  "home": "Stuttgart",
+  "away": "Dortmund",
+  "homeShots": 5,
+  "awayShots": 2
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-20",
+  "home": "Leverkusen",
+  "away": "RB Leipzig",
+  "homeShots": 6,
+  "awayShots": 3
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-20",
+  "home": "Schalke 04",
+  "away": "Elversberg",
+  "homeShots": 1,
+  "awayShots": 1
+ },
+ {
+  "comp": "Bundesliga",
+  "date": "2026-09-20",
+  "home": "Paderborn",
+  "away": "Hoffenheim",
+  "homeShots": 5,
+  "awayShots": 2
+ }
+]
