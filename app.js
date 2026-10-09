@@ -203,9 +203,9 @@ document.addEventListener("scroll", () => (tip.hidden = true), { passive: true }
 
 // ---------- gedeelde stukken ----------
 
-function compTabs(actief, href, { metAlle = false } = {}) {
+function compTabs(actief, href, { metAlle = false, alleHref = "#/analyse/alle" } = {}) {
   const tabs = S.index.competities.map((c) => `<a href="${href(c)}" ${c.code === actief ? 'aria-current="page"' : ""}>${esc(c.naam)}</a>`);
-  if (metAlle) tabs.push(`<a href="#/analyse/alle" ${actief === "alle" ? 'aria-current="page"' : ""}>Alle competities</a>`);
+  if (metAlle) tabs.push(`<a href="${alleHref}" ${actief === "alle" ? 'aria-current="page"' : ""}>Alle competities</a>`);
   return `<nav class="tabs" aria-label="Competitie">${tabs.join("")}</nav>`;
 }
 
@@ -596,6 +596,122 @@ function paginaAnalyseAlle() {
   koppelTeamOverzicht(paginaAnalyseAlle);
 }
 
+// ---------- pagina: kampioenen ----------
+
+// Per afgerond seizoen de echte kampioen en de schotkampioen.
+function kampioenen(comps) {
+  const seizoenen = [];
+  for (const c of comps) {
+    for (const s of c.seizoenen) {
+      if (s.code === huidigSeizoen) continue;
+      const rijen = stand(c.code, s.code);
+      const echt = rijen.find((r) => r.echt.pos === 1);
+      const schot = rijen.find((r) => r.schot.pos === 1);
+      if (echt && schot) seizoenen.push({ comp: c, seizoen: s.code, echt, schot });
+    }
+  }
+  return seizoenen.sort((a, b) => seizoenStart(b.seizoen) - seizoenStart(a.seizoen) || a.comp.naam.localeCompare(b.comp.naam, "nl"));
+}
+
+function paginaKampioenen(comp) {
+  const alle = !comp || comp === "alle";
+  const comps = alle ? S.index.competities : S.index.competities.filter((c) => c.code === comp);
+  if (!comps.length) return paginaKampioenen("alle");
+  const lijst = kampioenen(comps);
+
+  // Titels per team (sleutel competitie + team).
+  const teams = new Map();
+  const team = (c, naam) => {
+    const k = c.code + "|" + naam;
+    if (!teams.has(k)) teams.set(k, { team: naam, comp: c, echt: [], schot: [] });
+    return teams.get(k);
+  };
+  for (const x of lijst) {
+    team(x.comp, x.echt.team).echt.push(x.seizoen);
+    team(x.comp, x.schot.team).schot.push(x.seizoen);
+  }
+  const titels = [...teams.values()]
+    .map((t) => ({ ...t, verschil: t.echt.length - t.schot.length }))
+    .sort((a, b) => b.verschil - a.verschil || b.echt.length - a.echt.length || a.team.localeCompare(b.team, "nl"));
+  const zonderEchteTitel = new Set(titels.filter((t) => !t.echt.length).map((t) => t.comp.code + "|" + t.team));
+  const anders = lijst.filter((x) => x.echt.team !== x.schot.team);
+  const verrassend = lijst.filter((x) => zonderEchteTitel.has(x.comp.code + "|" + x.schot.team));
+  const periode = (c) => `${seizoenLabel(c.seizoenen.at(-1).code)} – ${seizoenLabel(c.seizoenen.find((s) => s.code !== huidigSeizoen)?.code ?? c.seizoenen[0].code)}`;
+  const titelLijst = (codes) => codes.map(seizoenLabel).map((l) => l.slice(2)).join(", ");
+
+  app.innerHTML = `
+    ${compTabs(alle ? "alle" : comp, (x) => `#/kampioenen/${x.code}`, { metAlle: true, alleHref: "#/kampioenen/alle" })}
+    <div class="sectiekop"><h1>Kampioenen${alle ? "" : " " + esc(comps[0].naam)}</h1></div>
+    <p class="meta">${lijst.length} afgeronde seizoenen${alle ? "" : ` (${periode(comps[0])})`}. Het lopende seizoen telt niet mee.</p>
+    <div class="tegels">
+      ${tegel(`${anders.length}/${lijst.length}`, "seizoenen met een andere schotkampioen dan de echte kampioen", lijst.length ? pct.format(anders.length / lijst.length) : "")}
+      ${tegel(String(verrassend.length), "schottitels voor teams die in deze periode nooit echt kampioen werden")}
+      ${tegel(esc(titels[0]?.verschil > 0 ? titels[0].team : "–"), "profiteert het meest", titels[0]?.verschil > 0 ? `${metTeken(titels[0].verschil)} titels t.o.v. de schotstand` : "")}
+      ${tegel(esc(titels.at(-1)?.verschil < 0 ? titels.at(-1).team : "–"), "profiteert het minst", titels.at(-1)?.verschil < 0 ? `${metTeken(titels.at(-1).verschil)} titels t.o.v. de schotstand` : "")}
+    </div>
+
+    <h2>Kampioenen die het in het echt nooit werden</h2>
+    <p class="uitleg">Schotkampioenen van clubs die in de hele periode met schotdata geen enkele echte titel wonnen.</p>
+    ${verrassend.length ? `<div class="tabelwrap"><table class="tabel">
+      <thead><tr><th>Seizoen</th>${alle ? '<th class="smal-weg">Competitie</th>' : ""}<th>Schotkampioen</th><th class="num">Echt</th><th>Echte kampioen</th></tr></thead>
+      <tbody>${verrassend.map((x) => `
+        <tr>
+          <td><a href="#/analyse/${x.comp.code}/${x.seizoen}">${seizoenLabel(x.seizoen)}</a></td>
+          ${alle ? `<td class="smal-weg">${esc(x.comp.naam)}</td>` : ""}
+          <td class="vet">${clubLink(x.schot.team)}</td>
+          <td class="num">${x.schot.echt.pos}e</td>
+          <td>${clubLink(x.echt.team)}</td>
+        </tr>`).join("")}
+      </tbody></table></div>` : `<p class="leeg">Geen: elke schotkampioen werd in deze periode ook minstens één keer echt kampioen.</p>`}
+
+    <h2>Wie profiteert het meest in titels?</h2>
+    <p class="uitleg">Echte titels min schottitels. Rechts: meer kampioenschappen dan de schoten op doel rechtvaardigen. Links: titels die de schotstand wel gaf maar het echt niet werden.</p>
+    <div class="grafiek" id="balken"></div>
+    <div class="tabelwrap">
+      <table class="tabel">
+        <thead><tr>
+          <th>Team</th>${alle ? '<th class="smal-weg">Competitie</th>' : ""}
+          <th class="num">Echte titels</th><th class="num">Schottitels</th><th class="num">Verschil</th>
+          <th class="smal-weg">Echt kampioen</th><th class="smal-weg">Schotkampioen</th>
+        </tr></thead>
+        <tbody>${titels.map((t) => `
+          <tr>
+            <td>${clubLink(t.team)}</td>${alle ? `<td class="smal-weg">${esc(t.comp.naam)}</td>` : ""}
+            <td class="num">${t.echt.length}</td><td class="num">${t.schot.length}</td>
+            <td class="num vet">${metTeken(t.verschil)}</td>
+            <td class="smal-weg zacht">${titelLijst(t.echt)}</td><td class="smal-weg zacht">${titelLijst(t.schot)}</td>
+          </tr>`).join("")}
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Alle seizoenen</h2>
+    <div class="tabelwrap">
+      <table class="tabel">
+        <thead><tr><th>Seizoen</th>${alle ? '<th class="smal-weg">Competitie</th>' : ""}<th>Echte kampioen</th><th>Schotkampioen</th><th class="num" title="Positie van de echte kampioen in de schotstand">Kampioen in schotstand</th></tr></thead>
+        <tbody>${lijst.map((x) => `
+          <tr class="${x.echt.team !== x.schot.team ? "anders" : ""}">
+            <td><a href="#/analyse/${x.comp.code}/${x.seizoen}">${seizoenLabel(x.seizoen)}</a></td>
+            ${alle ? `<td class="smal-weg">${esc(x.comp.naam)}</td>` : ""}
+            <td>${clubLink(x.echt.team)}</td>
+            <td>${x.echt.team === x.schot.team ? '<span class="zacht">zelfde</span>' : clubLink(x.schot.team)}</td>
+            <td class="num">${x.echt.schot.pos}e</td>
+          </tr>`).join("")}
+        </tbody>
+      </table>
+    </div>`;
+
+  const grafiek = titels.filter((t) => t.verschil !== 0);
+  const el = document.getElementById("balken");
+  charts = [() => divergerendeBalken(el, grafiek.map((t) => ({
+    label: alle ? `${t.team} (${COMP_KORT[t.comp.code] ?? t.comp.code})` : t.team,
+    waarde: t.verschil,
+    tip: `${t.team} – ${t.comp.naam}\nEchte titels: ${t.echt.length}${t.echt.length ? " (" + titelLijst(t.echt) + ")" : ""}\nSchottitels: ${t.schot.length}${t.schot.length ? " (" + titelLijst(t.schot) + ")" : ""}`,
+  })), { as: "Echte titels min schottitels per team" })];
+  if (grafiek.length) tekenGrafieken();
+  else el.innerHTML = '<p class="leeg" style="padding:8px 16px">Elke titel ging naar de schotkampioen.</p>';
+}
+
 // ---------- routering ----------
 
 async function render() {
@@ -608,6 +724,9 @@ async function render() {
     if (sectie === "club" && a) {
       document.title = `${a} – Schotstand`;
       await paginaClub(a);
+    } else if (sectie === "kampioenen") {
+      document.title = "Kampioenen – Schotstand";
+      paginaKampioenen(a);
     } else if (sectie === "analyse") {
       document.title = "Analyse – Schotstand";
       if (a === "alle") paginaAnalyseAlle();

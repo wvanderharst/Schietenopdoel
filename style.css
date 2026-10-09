@@ -90,6 +90,8 @@ h2 { font-size: 1.05rem; margin: 32px 0 10px; }
 .tabel td.team { width: 100%; }
 .tabel .scheiding { border-left: 1px solid var(--lijn); }
 .tabel tbody tr:hover td { background: var(--accent-zacht); }
+.tabel tr.anders td { font-weight: 600; }
+.tabel tr.anders td .zacht { font-weight: 400; }
 .sorteerbaar th button { all: unset; cursor: pointer; }
 .sorteerbaar th button:focus-visible { outline: 2px solid var(--accent); }
 .sorteerbaar th[aria-sort="ascending"], .sorteerbaar th[aria-sort="descending"] { color: var(--tekst); }

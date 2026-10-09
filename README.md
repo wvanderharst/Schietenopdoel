@@ -11,6 +11,8 @@ schoten op doel heeft, voor de Eredivisie, Premier League, La Liga, Serie A en B
   schotstand en in het echt, en hoeveel van de schoten op doel raak waren.
 - **Analyse**: per seizoen of over alle seizoenen het verschil tussen echte punten en
   schotpunten per team, hoe vaak de schotkampioen echt kampioen werd, en de correlatie.
+- **Kampioenen**: echte kampioen naast de schotkampioen per seizoen, schotkampioenen die in de
+  hele periode nooit echt kampioen werden, en welke teams het meest/minst profiteren in titels.
 
 Meer schoten op doel dan de tegenstander = winst (3 punten), evenveel = gelijk.
 Beide standen sorteren op punten, saldo en gescoord (geen puntenaftrek of onderling resultaat).
