@@ -28,7 +28,7 @@ seizoenen op en ververst steeds het huidige en vorige seizoen.
 
 ## GitHub Actions
 
-`.github/workflows/schotstand.yml` draait dagelijks om 06:17 UTC, commit nieuwe data
+`.github/workflows/schotstand.yml` draait elke dinsdag om 06:17 UTC (na de speelronde van het weekend), commit nieuwe data
 naar `main` en publiceert de site naar de branch `gh-pages`.
 Handmatig: **Actions → "Schotstand bijwerken en publiceren" → Run workflow**
 (vink "Alle seizoenen opnieuw ophalen" aan om alles te verversen).
