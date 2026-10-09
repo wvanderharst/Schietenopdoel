@@ -15,17 +15,15 @@ Premier League, La Liga, Serie A en Bundesliga.
 | Onderdeel | Wat |
 | --- | --- |
 | `scripts/schotstand_scraper.py` | Haalt de CSV's op en schrijft `data/wedstrijden.json` |
-| `.github/workflows/schotstand.yml` | Draait de scraper dagelijks (06:17 UTC), commit nieuwe data en publiceert de site op GitHub Pages |
+| `.github/workflows/schotstand.yml` | Draait de scraper dagelijks (06:17 UTC), commit nieuwe data en zet de site in de branch `gh-pages` (GitHub Pages) |
 | `index.html`, `style.css`, `app.js` | De site; rekent de stand in de browser uit |
 
-## Eenmalig instellen
+## Site
 
-1. **Settings → Pages → Build and deployment → Source: _GitHub Actions_.**
-2. **Settings → Actions → General → Workflow permissions: _Read and write permissions_**
-   (zodat de workflow de nieuwe data kan committen).
-3. **Actions → "Schotstand bijwerken en publiceren" → Run workflow** om direct de eerste data op te halen.
+https://wvanderharst.github.io/Schietenopdoel/
 
-Daarna wordt de site elke dag automatisch bijgewerkt.
+Bijwerken op verzoek: **Actions → "Schotstand bijwerken en publiceren" → Run workflow**.
+Werkt de site niet? Controleer of **Settings → Pages** de branch `gh-pages` (map `/`) als bron heeft.
 
 ## Lokaal draaien
 
