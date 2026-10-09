@@ -14,7 +14,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
 
 concurrency:
   group: schotstand
@@ -53,8 +52,9 @@ jobs:
           git pull --rebase origin main
           git push origin HEAD:main
 
-      # GitHub Pages serveert de branch gh-pages (wordt automatisch aangezet
-      # zodra die branch bestaat).
+      # GitHub Pages serveert de branch gh-pages. Pushes met de workflow-token
+      # starten geen Pages-build, daarom leest de site de data live uit main;
+      # deze kopie is alleen een reserve.
       - name: Site publiceren naar gh-pages
         run: |
           mkdir _site
@@ -69,10 +69,3 @@ jobs:
           git commit -q -m "Site $(date -u +%Y-%m-%dT%H:%MZ)"
           git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" gh-pages
 
-      # Een push met de workflow-token start geen Pages-build; vraag er expliciet een aan.
-      - name: Pages-build aanvragen
-        run: |
-          curl -sSf -X POST \
-            -H "Authorization: Bearer ${{ github.token }}" \
-            -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/${{ github.repository }}/pages/builds"

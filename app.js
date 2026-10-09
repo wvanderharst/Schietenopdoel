@@ -29,8 +29,18 @@ const formatDatum = (iso) => datumFmt.format(new Date(iso + "T12:00:00"));
 const clubLink = (team) => `<a href="#/club/${encodeURIComponent(team)}">${esc(team)}</a>`;
 const compNaam = (code) => S.index.competities.find((c) => c.code === code)?.naam ?? code;
 
+// Op GitHub Pages komt de data rechtstreeks uit main (raw.githubusercontent.com),
+// zodat de wekelijkse datacommit meteen zichtbaar is zonder nieuwe Pages-build.
+const DATA = (() => {
+  const host = location.hostname;
+  if (!host.endsWith(".github.io")) return "data/";
+  const eigenaar = host.slice(0, -".github.io".length);
+  const repo = location.pathname.split("/")[1];
+  return `https://raw.githubusercontent.com/${eigenaar}/${repo}/main/data/`;
+})();
+
 async function laadJson(pad) {
-  const res = await fetch(pad, { cache: "no-cache" });
+  const res = await fetch(DATA + pad);
   if (!res.ok) throw new Error(`${pad}: ${res.status}`);
   return res.json();
 }
@@ -49,7 +59,7 @@ const stand = (comp, seizoen) => (S.samenvatting[comp]?.[seizoen] ?? []).map(tea
 async function wedstrijden(comp, seizoen) {
   const key = comp + "/" + seizoen;
   if (!S.seizoenen.has(key)) {
-    S.seizoenen.set(key, laadJson(`data/seizoenen/${comp}/${seizoen}.json`).then((d) =>
+    S.seizoenen.set(key, laadJson(`seizoenen/${comp}/${seizoen}.json`).then((d) =>
       d.wedstrijden.map(([datum, thuis, uit, ts, us, tg, ug]) => ({ datum, thuis, uit, ts, us, tg, ug }))
     ));
   }
@@ -623,7 +633,7 @@ document.getElementById("zoekveld").addEventListener("input", (e) => {
 
 (async function start() {
   try {
-    [S.index, S.samenvatting] = await Promise.all([laadJson("data/index.json"), laadJson("data/samenvatting.json")]);
+    [S.index, S.samenvatting] = await Promise.all([laadJson("index.json"), laadJson("samenvatting.json")]);
   } catch (err) {
     app.innerHTML = `<p class="leeg">Nog geen data. De database wordt gevuld door GitHub Actions (${esc(err.message)}).</p>`;
     return;
